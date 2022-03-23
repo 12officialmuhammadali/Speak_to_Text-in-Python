@@ -1,0 +1,12 @@
+import pyttsx3 #pip install pyttsx3
+engine = pyttsx3.init('sapi5') #google sapi5 voice
+voices = engine.getProperty('voices') #Getting computer voices
+# print(voices[1].id)
+engine.setProperty('voice', voices[0].id)   # chosing David Voice 
+
+def speak(audio):
+    engine.say(audio) # Speak function
+    engine.runAndWait()
+name = speak('i am very happy to make this program')
+
+print("Sentance complete successfully")  
